@@ -1,4 +1,4 @@
-import { Sparkle } from 'lucide-react'
+import { Sparkle, X } from 'lucide-react'
 import React from 'react'
 
 function Header() {
@@ -41,6 +41,27 @@ function Header() {
                             ></span>
                     </button>
                 </nav>
+
+                {/* mobile menu button */}
+                <button className={`md:hidden p-2 rounded-lg transition-all duration-300`}>
+                    <X size={24} />
+                </button>
+            </div>
+
+            {/* Mobile Navigation Conditional Rendering */}
+            <div 
+                className='
+                    md:hidden bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl mt-2 py-6 border border-purple-100
+                '
+            >
+                <button 
+                    className='
+                        block w-full text-left px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 
+                        hover:to-pink-50 hover:text-purple capitalize font-medium transition-all duration-300
+                    '
+                >
+                    Home
+                </button>
             </div>
         </div>
     </header>
