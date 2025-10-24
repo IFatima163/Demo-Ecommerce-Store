@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Play } from 'lucide-react'
 import React from 'react'
 
 function Hero() {
@@ -52,6 +52,61 @@ function Hero() {
                                 <ArrowRight/>
                                 Start Your Project
                             </button>
+
+                            <button 
+                                className='
+                                    group border-white/30 text-white hover:bg-white hover:text-purple-900 px-8 
+                                    py-4 rounded-2xl font-semibold transition-all duration-300 flex items-center justify-center 
+                                    shadow-2xl hover:shadow-purple-500/25 hover:scale-105
+                                '
+                            >
+                                <Play size={20} className='mr-2 group-hover:scale-110 transition-transform duration-300'/>
+                                Watch Our Story
+                            </button>
+                        </div>
+
+                        {/* Stats */}
+                        <div className='grid grid-cols-3 gap-6'>
+                            <div className='text-center'>
+                                <div className='text-3xl font-bold text-white mb-1'>200+</div>
+                                <div className='text-gray-300 text-sm'>Projects</div>
+                            </div>
+                            <div className='text-center'>
+                                <div className='text-3xl font-bold text-white mb-1'>98%</div>
+                                <div className='text-gray-300 text-sm'>Satisfaction</div>
+                            </div>
+                            <div className='text-center'>
+                                <div className='text-3xl font-bold text-white mb-1'>24/7</div>
+                                <div className='text-gray-300 text-sm'>Support</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Side */}
+                    <div className='relative'>
+                        <div className='reltive bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl'>
+                            <div 
+                                className='
+                                    absolute -top-4 -right-4 w-4 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce
+                                '
+                            ></div>
+
+                            <div className='space-y-6 max-w-3xl'>
+                                <div className='flex items-center space-x-4 bg-white/10 rounded-2xl backdrop-blur-sm'>
+                                    <div 
+                                        className='
+                                            w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center
+                                        '
+                                    >
+                                        <span className='text-white font-bold'>UI</span>
+                                    </div>
+                                    <div>
+                                        <h3 className='text-white font-semibold'>
+                                            <p className='text-gray-300 text-sm'>UI/UX Design</p>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
