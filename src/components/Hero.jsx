@@ -87,12 +87,12 @@ function Hero() {
                         <div className='reltive bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl'>
                             <div 
                                 className='
-                                    absolute -top-4 -right-4 w-4 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce
+                                    absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce
                                 '
                             ></div>
 
                             <div className='space-y-6 max-w-3xl'>
-                                <div className='flex items-center space-x-4 bg-white/10 rounded-2xl backdrop-blur-sm'>
+                                <div className='flex items-center space-x-4 p-4 bg-white/10 rounded-2xl backdrop-blur-sm'>
                                     <div 
                                         className='
                                             w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center
@@ -101,9 +101,45 @@ function Hero() {
                                         <span className='text-white font-bold'>UI</span>
                                     </div>
                                     <div>
-                                        <h3 className='text-white font-semibold'>
-                                            <p className='text-gray-300 text-sm'>UI/UX Design</p>
-                                        </h3>
+                                        <h3 className='text-white font-semibold'>UI/UX Design</h3>
+                                        <p className='text-gray-300 text-sm'>Beautiful & Intutive interface</p>                                        
+                                    </div>
+                                    <div className='ml-auto'>
+                                        <div className='w-3 h-3 bg-green-400 rounded-full animate-pulse'></div>
+                                    </div>
+                                </div>                                
+                                <div className='flex items-center space-x-4 p-4 bg-white/10 rounded-2xl backdrop-blur-sm'>
+                                    <div 
+                                        className='
+                                            w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl 
+                                            flex items-center justify-center backdrop-blur-sm
+                                        '
+                                    >
+                                        <span className='text-white font-bold'>DEV</span>
+                                    </div>
+                                    <div>
+                                        <h3 className='text-white font-semibold'>Development</h3>
+                                        <p className='text-gray-300 text-sm'>Modern web application</p>
+                                    </div>
+                                    <div className='ml-auto'>
+                                        <div className='w-3 h-3 bg-green-400 rounded-full animate-pulse'></div>
+                                    </div>
+                                </div>
+                                <div className='flex items-center space-x-4 p-4 bg-white/10 rounded-2xl backdrop-blur-sm'>
+                                    <div 
+                                        className='
+                                            w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl 
+                                            flex items-center justify-center backdrop-blur-sm
+                                        '
+                                    >
+                                        <span className='text-white font-bold'>SEO</span>
+                                    </div>
+                                    <div>
+                                        <h3 className='text-white font-semibold'>Optimization</h3>
+                                        <p className='text-gray-300 text-sm'>Performance & visibility</p>
+                                    </div>
+                                    <div className='ml-auto'>
+                                        <div className='w-3 h-3 bg-green-400 rounded-full animate-pulse'></div>
                                     </div>
                                 </div>
                             </div>

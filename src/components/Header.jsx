@@ -62,7 +62,7 @@ function Header() {
                         {menu.map((item) => {
                             return(
                                 <button
-                                    onClick={scrollToSection(item)}
+                                    onClick={() => scrollToSection(item)}
                                     className={`
                                         capitalize font-medium transition-all duration-300 hover:scale-105 
                                         relative group ${isScrolled 
