@@ -1,4 +1,4 @@
-import { User } from 'lucide-react'
+import { ArrowRight, User } from 'lucide-react'
 import React from 'react'
 
 function Services() {
@@ -72,7 +72,56 @@ function Services() {
                             >
                                 <User className='text-white' size={28}/>
                             </div>
+                            <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                                Service Title
+                            </h3>
+                            <p>Services Description</p>
+                            <ul>
+                                <li className='flex items-center text-gray-700'>
+                                    <div className={`w-2 h-2 bg-gradient-to-r rounded-full mr-3 flex-shrink-0`}></div>
+                                    <span className='text-sm font-medium'>Feature</span>
+                                </li>
+                            </ul>
+                            <button
+                                className={`
+                                    group/btn inline-flex items-center text-transparent bg-clip-text 
+                                    bg-gradient-to-r font-semibold hover:scale-105 transition-all duration-300
+                                `}
+                            >
+                                Learn More
+                                <ArrowRight 
+                                    className='
+                                        ml-2 w-4 h-4 text-purple-500 group-hover:/btn:translate-x-1 transition-all duration-300
+                                    '
+                                />
+                            </button>
                         </div>
+                    </div>
+                </div>
+
+                {/* Button CTA */}
+                <div className='text-center mt-16'>
+                    <div 
+                        className='
+                            inline-flex justify-center items-center space-x-4 bg-gradient-to-r 
+                            from-purple-600 to-pink-600 rounded-2xl p-6 text-white w-full
+                        '
+                    >
+                        <div>
+                            <h3 className='text-lg font-semibold'>Need a custom solution?</h3>
+                            <p className='text-purple-100 text-sm'>
+                                Let's discuss your unique requirements
+                            </p>
+                        </div>
+                        <button 
+                            className='
+                                bg-white text-purple-600 px-6 py-3 rounded-xl
+                                font-semibold hover:bg-gray-100 transition-colors
+                                duration-300 whitespace-nowrap
+                            '
+                        >
+                            Get Quote
+                        </button>
                     </div>
                 </div>
             </div>
