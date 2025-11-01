@@ -1,5 +1,92 @@
-import { ArrowRight, User } from 'lucide-react'
+import { ArrowRight, BarChart, Code, Globe, Megaphone, Palette, Smartphone, User } from 'lucide-react'
 import React from 'react'
+
+const services = [
+    {
+        icon: Palette,
+        title: "Brand & Design",
+        description: 
+            "Complete visual identity and brand strategy that resonates with your audience.",
+        features: [
+            "Logo & Identity",
+            "Brand Guidelines",
+            "Visual Systems",
+            "Printed Design",
+        ],
+        color: "from-purple-500 to-pink-500",
+        bgColor: "from-purple-50 to-pink-50",
+    },
+    {
+        icon: Code,
+        title: "Web Development",
+        description: 
+            "Modern, responsive websites built with cutting-edge techologies.",
+        features: [
+            "React & Next.js",
+            "E-commerce",
+            "CMS Integration",
+            "Performance Optimization",
+        ],
+        color: "from-blue-500 to-cyan-500",
+        bgColor: "from-blue-50 to-cyan-50",
+    },
+    {
+        icon: Smartphone,
+        title: "Mobile Apps",
+        description: 
+            "Native and cross-platform mobile applications for iOS and Android.",
+        features: [
+            "iOS Development",
+            "Android Development",
+            "React Native",
+            "App Store Optimization",
+        ],
+        color: "from-green-500 to-teal-500",
+        bgColor: "from-green-50 to-teal-50",
+    },
+    {
+        icon: Megaphone,
+        title: "Digital Marketing",
+        description: 
+            "Strategic marketing campaigns that drive engagement and conversions",
+        features: [
+            "Social Media Strategy",
+            "Content Marketing",
+            "Email Campaigns",
+            "Influencer Marketing",
+        ],
+        color: "from-yellow-500 to-orange-500",
+        bgColor: "from-yellow-50 to-orange-50",
+    },
+    {
+        icon: BarChart,
+        title: "Analytics & Insights",
+        description: 
+            "Data-driven insights to optimize performance and maximize ROI.",
+        features: [
+            "Performance Tracking",
+            "User Behavior Analysis",
+            "Conversion Optimization",
+            "Custom Dashboards",
+        ],
+        color: "from-red-500 to-pink-500",
+        bgColor: "from-red-50 to-pink-50",
+    },
+    {
+        icon: Globe,
+        title: "Digital Strategy",
+        description: 
+            "Comprehensive digital transformation and strategic consulting services.",
+        features: [
+            "Market Research",
+            "Comprehensive Analysis",
+            "Digital Roadmap",
+            "Technology Consulting",
+        ],
+        color: "from-indigo-500 to-purple-500",
+        bgColor: "from-indigo-50 to-purple-50",
+    },
+]
 
 function Services() {
     return (
