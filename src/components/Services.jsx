@@ -134,56 +134,67 @@ function Services() {
                 </div>
 
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                    <div 
-                        className={`
-                            group relative bg-gradient-to-br rounded-3xl p-8 hover:shadow-2xl transition-all 
-                            duration-500 hover:translate-y-2 border border-white/50 overflow-hidden
-                        `}
-                    >
-                        {/* Background Pattern */}
-                        <div className='absolute top-0 right-0 w-32 h-32 opacity-10'>
-                            <div
-                                className={`
-                                    w-full h-full bg-gradient-to-br rounded-full transform translate-x-16 
-                                    -translate-y-16 group-hover:scale-150 transition-all
-                                `} 
-                            ></div>
-                        </div>
-
-                        <div className='relative z-10'>
+                    {services.map((services, index) => {
+                        return (
                             <div 
-                                className='
-                                    w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center 
-                                    mb-6 group-hover:rotate-6 transition-all duration-300 shadow-lg
-                                '
-                            >
-                                <User className='text-white' size={28}/>
-                            </div>
-                            <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-                                Service Title
-                            </h3>
-                            <p>Services Description</p>
-                            <ul>
-                                <li className='flex items-center text-gray-700'>
-                                    <div className={`w-2 h-2 bg-gradient-to-r rounded-full mr-3 flex-shrink-0`}></div>
-                                    <span className='text-sm font-medium'>Feature</span>
-                                </li>
-                            </ul>
-                            <button
                                 className={`
-                                    group/btn inline-flex items-center text-transparent bg-clip-text 
-                                    bg-gradient-to-r font-semibold hover:scale-105 transition-all duration-300
+                                    group relative bg-gradient-to-br ${services.bgColor} rounded-3xl p-8 hover:shadow-2xl 
+                                    transition-all duration-500 hover:translate-y-2 border border-white/50 overflow-hidden
                                 `}
                             >
-                                Learn More
-                                <ArrowRight 
-                                    className='
-                                        ml-2 w-4 h-4 text-purple-500 group-hover:/btn:translate-x-1 transition-all duration-300
-                                    '
-                                />
-                            </button>
-                        </div>
-                    </div>
+                                {/* Background Pattern */}
+                                <div className='absolute top-0 right-0 w-32 h-32 opacity-10'>
+                                    <div
+                                        className={`
+                                            w-full h-full bg-gradient-to-br rounded-full transform translate-x-16 
+                                            -translate-y-16 group-hover:scale-150 transition-all ${services.color}
+                                        `} 
+                                    ></div>
+                                </div>
+
+                                <div className='relative z-10'>
+                                    <div 
+                                        className={`
+                                            w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center 
+                                            mb-6 group-hover:rotate-6 transition-all duration-300 shadow-lg ${services.color}
+                                        `}
+                                    >
+                                        <services.icon className='text-white' size={28}/>
+                                    </div>
+                                    <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                                        {services.title}
+                                    </h3>
+                                    <p className='text-gray-600 mb-6 leading-relaxed'>
+                                        {services.description}
+                                    </p>
+                                    <ul className='space-y-3 mb-6'>
+                                        {services.features.map((feature, featureindex) => {     
+                                            return(   
+                                                <li className='flex items-center text-gray-700' key={featureindex}>
+                                                    <div className={`w-2 h-2 bg-gradient-to-r rounded-full mr-3 flex-shrink-0 ${services.color}`}></div>
+                                                    <span className='text-sm font-medium'>{feature}</span>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                    <button
+                                        className={`
+                                            group/btn inline-flex items-center text-transparent bg-clip-text bg-gradient-to-r 
+                                            font-semibold hover:scale-105 transition-all duration-300 ${services.color}
+                                        `}
+                                    >
+                                        Learn More
+                                        <ArrowRight 
+                                            className={`
+                                                ml-2 w-4 h-4 text-purple-500 group-hover:/btn:translate-x-1 
+                                                transition-all duration-300 ${services.color}
+                                            `}
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
 
                 {/* Button CTA */}
