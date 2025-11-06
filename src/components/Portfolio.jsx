@@ -1,3 +1,4 @@
+import { Eye } from 'lucide-react'
 import React from 'react'
 
 function Portfolio() {
@@ -40,6 +41,57 @@ function Portfolio() {
                 </div>
 
                 {/* Filter Buttons */}
+                <div className='flex flex-wrap justify-center gap-4 mb-12'>
+                    <button
+                        className={`
+                            px-6 py-3 rounded-2xl font-semibold transition-all duration-300
+                        `}
+                    >
+                        Filter Label
+                    </button>
+                </div>
+
+                {/* Project Grid */}
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                    <div 
+                        className='
+                            group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all
+                            duration-500 hover:-translate-y-2 border border-gray-100
+                        '
+                    >
+                        <div className='relative overflow-hidden'>
+                            <img
+                                src=''
+                                alt=''
+                                className='
+                                    w-full h-64 object-cover group-hover:scale-110 transition-all duration-500
+                                '
+                            />
+                            <div 
+                                className='
+                                    absolute inset-0 bg-gradient-to-t from-black/60 via-transparent 
+                                    to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                                '
+                            >
+                                <div className='absolute bottom-4 left-4 right-4 flex justify-between items-end'>
+                                    <div className='flex space-x-2'>
+                                        <div 
+                                            className='
+                                                flex items-center space-x-1 bg-white/20 
+                                                backdrop-blur-sm rounded-full px-3 py-1
+                                            '
+                                        >
+                                            <Eye className='text-white' size={14}/>
+                                            <span className='text-white text-xs font-medium'>
+                                                Project Stats Views
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )
