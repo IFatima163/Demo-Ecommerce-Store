@@ -1,4 +1,4 @@
-import { Eye } from 'lucide-react'
+import { ArrowRight, ExternalLink, Eye, Heart } from 'lucide-react'
 import React from 'react'
 
 function Portfolio() {
@@ -84,12 +84,116 @@ function Portfolio() {
                                             <Eye className='text-white' size={14}/>
                                             <span className='text-white text-xs font-medium'>
                                                 Project Stats Views
-                                            </span>
+                                            </span> 
+                                        </div>
+
+                                        <div 
+                                            className='
+                                                flex items-center space-x-1 bg-white/20 
+                                                backdrop-blur-sm rounded-full px-3 py-1
+                                            '
+                                        >
+                                            <Heart className='text-white' size={14}/>
+                                            <span className='text-white text-xs font-medium'>
+                                                Project Stats Likes
+                                            </span> 
                                         </div>
                                     </div>
-                                </div>    
+
+                                    <button 
+                                        className='
+                                            w-10 h-10 bg-white rounded-full flex items-center justify-center 
+                                            hover:scale-110 transition-all duration-300
+                                        '
+                                    >
+                                        <ExternalLink className='text-gray-700' size={18}/>
+                                    </button>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div className='p-6'>
+                            <div className='text-sm text-purple-600 font-semibold mb-2'>
+                                Project Category
+                            </div>
+                            <h3 
+                                className='
+                                    text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600
+                                    transition-all duration-300
+                                '
+                            >
+                                Project Title
+                            </h3>
+                            <p className='text-gray-600 mb-4 leading-relaxed'>
+                                Project Description
+                            </p>
+
+                            <div className='flex flex-wrap gap-2 mb-4'>
+                                <span 
+                                    className='
+                                        px-3 py-1 bg-gradient-to-r from-purple-50 to-pink-50 
+                                        text-purple-600 text-xs font-medium rounded-full border border-purple-100
+                                    '
+                                >
+                                    Tags
+                                </span>
+                            </div>
+
+                            <button 
+                                className='
+                                    group/btn inline-flex items-center text-purple-600 font-semibold
+                                    hover:text-pink-600 transition-all duration-300
+                                '
+                            >
+                                View Project 
+                                <ArrowRight 
+                                    className='
+                                        ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300
+                                    '
+                                />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Button CTA */}
+                <div className='text-center mt-16'>
+                    <div 
+                        className='
+                            bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 text-white 
+                            relative overflow-hidden
+                        '
+                    >
+                        <div className='absolute isnet-0 bg-black/10'></div>
+                        <div className='relative z-10'>
+                            <h3 className='text-2xl mb-4 font-semibold'>
+                                Like What You See?
+                            </h3>
+                            <p className='text-purple-100 mb-6 max-w-2xl mx-auto'>
+                                Let's create something amazing together. View our complete portfolio or start your project today.
+                            </p>
+                            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                                <button 
+                                    className='
+                                        bg-white text-purple-600 px-6 py-3 rounded-xl font-semibold
+                                        hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap
+                                    '
+                                >
+                                    View All Projects
+                                </button>
+                                <button 
+                                    className='
+                                        border-2 border-white text-white px-6 py-3 rounded-xl font-semibold
+                                        hover:bg-white hover:text-purple-600 transition-colors duration-300 whitespace-nowrap
+                                    '
+                                >
+                                    Start your Project
+                                </button>
+                                
                             </div>
                         </div>
+
+                        
                     </div>
                 </div>
             </div>
