@@ -1,6 +1,89 @@
 import { ArrowRight, ExternalLink, Eye, Heart } from 'lucide-react'
 import React from 'react'
 
+const filters = [
+    {id: "all", label: "All Projects"},
+    {id: "web", label: "Web Design"},
+    {id: "mobile", label: "Mobile Apps"},
+    {id: "branding", label: "Branding"},
+    {id: "ecommerce", label: "E-commerce"},
+]
+
+const projects = [
+    {
+        id: 1,
+        title: "Luxe Fashion Store",
+        category: "E-commerce Platform",
+        description:
+            "Premium fashion e-commerce with AR try-on features and personalized recommendations.",
+        image: 
+            "https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=800",
+        tags: ["React", "Node.js", "AR Technology"],
+        type: "ecommerce",
+        stats: {views: "2.5K", likes: "180"},
+    },
+    {
+        id: 2,
+        title: "FinTech Dashboard",
+        category: "Web Application",
+        description:
+            "Real-time financial analytics dashboard with advanced data visualization.",
+        image: 
+            "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
+        tags: ["Vue.js", "D3.js", "WebSocket"],
+        type: "web",
+        stats: {views: "3.2K", likes: "245"},
+    },
+    {
+        id: 3,
+        title: "Wellness Mobile App",
+        category: "Mobile Development",
+        description:
+            "Comprehensive wellness app with meditation, fitness tracking, and nutrition planning.",
+        image: 
+            "https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg",
+        tags: ["React Native", "Health Kit", "AI"],
+        type: "mobile",
+        stats: {views: "1.8K", likes: "156"},
+    },
+    {
+        id: 4,
+        title: "GreenTech Branding",
+        category: "Brand Identity",
+        description:
+            "Complete rebrand for sustainable technology company including logo and guidlines.",
+        image: 
+            "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+        tags: ["Brand Strategy", "Logo Design", "Guidlines"],
+        type: "branding",
+        stats: {views: "4.1K", likes: "320"},
+    },
+    {
+        id: 5,
+        title: "Restaurant Booking",
+        category: "Web Platform",
+        description:
+            "Modern restaurant reservation system with real-time availability and reviews.",
+        image: 
+            "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800",
+        tags: ["Next.js", "Stripe", "Google Maps"],
+        type: "web",
+        stats: {views: "2.9K", likes: "198"},
+    },
+    {
+        id: 6,
+        title: "Crypto Trading App",
+        category: "Mobile Application",
+        description:
+            "Secure cryptocurrency trading platform with advanced charting and portfolio management.",
+        image: 
+            "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=800",
+        tags: ["Flutter", "Blockchain", "Security"],
+        type: "mobile",
+        stats: {views: "5.3K", likes: "412"},
+    },
+]
+
 function Portfolio() {
     return (
         <section 
