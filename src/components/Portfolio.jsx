@@ -1,5 +1,5 @@
 import { ArrowRight, ExternalLink, Eye, Heart } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 
 const filters = [
     {id: "all", label: "All Projects"},
@@ -85,6 +85,14 @@ const projects = [
 ]
 
 function Portfolio() {
+    const [activeFilter, setActiveFilter] = useState("all")
+
+    const filteredProjects = 
+        activeFilter === "all"
+            ? projects
+            : projects.filter((project) => project.type === activeFilter)
+
+
     return (
         <section 
             id='portfolio'
@@ -125,118 +133,137 @@ function Portfolio() {
 
                 {/* Filter Buttons */}
                 <div className='flex flex-wrap justify-center gap-4 mb-12'>
-                    <button
-                        className={`
-                            px-6 py-3 rounded-2xl font-semibold transition-all duration-300
-                        `}
-                    >
-                        Filter Label
-                    </button>
+                    {filters.map((filter) => {
+                        return(
+                            <button
+                                onClick={() => setActiveFilter(filter.id)}
+                                className={`
+                                    px-6 py-3 rounded-2xl font-semibold transition-all duration-300
+                                    ${
+                                        activeFilter === filter.id
+                                            ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105"
+                                            : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-purple-200"
+                                    }
+                                `}
+                            >
+                                {filter.label}
+                            </button>
+                        )
+                    })}
                 </div>
 
                 {/* Project Grid */}
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                    <div 
-                        className='
-                            group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all
-                            duration-500 hover:-translate-y-2 border border-gray-100
-                        '
-                    >
-                        <div className='relative overflow-hidden'>
-                            <img
-                                src=''
-                                alt=''
-                                className='
-                                    w-full h-64 object-cover group-hover:scale-110 transition-all duration-500
-                                '
-                            />
+                    {filteredProjects.map((project) => {
+                        return (
                             <div 
                                 className='
-                                    absolute inset-0 bg-gradient-to-t from-black/60 via-transparent 
-                                    to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                                    group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all
+                                    duration-500 hover:-translate-y-2 border border-gray-100
                                 '
                             >
-                                <div className='absolute bottom-4 left-4 right-4 flex justify-between items-end'>
-                                    <div className='flex space-x-2'>
-                                        <div 
-                                            className='
-                                                flex items-center space-x-1 bg-white/20 
-                                                backdrop-blur-sm rounded-full px-3 py-1
-                                            '
-                                        >
-                                            <Eye className='text-white' size={14}/>
-                                            <span className='text-white text-xs font-medium'>
-                                                Project Stats Views
-                                            </span> 
-                                        </div>
+                                <div className='relative overflow-hidden'>
+                                    <img
+                                        src={project.image}
+                                        alt=''
+                                        className='
+                                            w-full h-64 object-cover group-hover:scale-110 transition-all duration-500
+                                        '
+                                    />
+                                    <div 
+                                        className='
+                                            absolute inset-0 bg-gradient-to-t from-black/60 via-transparent 
+                                            to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                                        '
+                                    >
+                                        <div className='absolute bottom-4 left-4 right-4 flex justify-between items-end'>
+                                            <div className='flex space-x-2'>
+                                                <div 
+                                                    className='
+                                                        flex items-center space-x-1 bg-white/20 
+                                                        backdrop-blur-sm rounded-full px-3 py-1
+                                                    '
+                                                >
+                                                    <Eye className='text-white' size={14}/>
+                                                    <span className='text-white text-xs font-medium'>
+                                                        {project.stats.views}
+                                                    </span> 
+                                                </div>
 
-                                        <div 
-                                            className='
-                                                flex items-center space-x-1 bg-white/20 
-                                                backdrop-blur-sm rounded-full px-3 py-1
-                                            '
-                                        >
-                                            <Heart className='text-white' size={14}/>
-                                            <span className='text-white text-xs font-medium'>
-                                                Project Stats Likes
-                                            </span> 
+                                                <div 
+                                                    className='
+                                                        flex items-center space-x-1 bg-white/20 
+                                                        backdrop-blur-sm rounded-full px-3 py-1
+                                                    '
+                                                >
+                                                    <Heart className='text-white' size={14}/>
+                                                    <span className='text-white text-xs font-medium'>
+                                                        {project.stats.likes}
+                                                    </span> 
+                                                </div>
+                                            </div>
+
+                                            <button 
+                                                className='
+                                                    w-10 h-10 bg-white rounded-full flex items-center justify-center 
+                                                    hover:scale-110 transition-all duration-300
+                                                '
+                                            >
+                                                <ExternalLink className='text-gray-700' size={18}/>
+                                            </button>
                                         </div>
+                                    </div>    
+                                </div>
+
+                                <div className='p-6'>
+                                    <div className='text-sm text-purple-600 font-semibold mb-2'>
+                                        {project.category}
+                                    </div>
+                                    <h3 
+                                        className='
+                                            text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600
+                                            transition-all duration-300
+                                        '
+                                    >
+                                        {project.title}
+                                    </h3>
+                                    <p className='text-gray-600 mb-4 leading-relaxed'>
+                                        {project.description}
+                                    </p>
+
+                                    <div className='flex flex-wrap gap-2 mb-4'>
+                                        {project.tags.map((tag, tagindex) => {
+                                            return (
+                                                <span 
+                                                    className='
+                                                        px-3 py-1 bg-gradient-to-r from-purple-50 to-pink-50 
+                                                        text-purple-600 text-xs font-medium rounded-full border 
+                                                        border-purple-100'
+                                                    key={tagindex}
+                                                >
+                                                    {tag}
+                                                </span>
+                                            )
+                                        })}
                                     </div>
 
                                     <button 
                                         className='
-                                            w-10 h-10 bg-white rounded-full flex items-center justify-center 
-                                            hover:scale-110 transition-all duration-300
+                                            group/btn inline-flex items-center text-purple-600 font-semibold
+                                            hover:text-pink-600 transition-all duration-300
                                         '
                                     >
-                                        <ExternalLink className='text-gray-700' size={18}/>
+                                        View Project 
+                                        <ArrowRight 
+                                            className='
+                                                ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300
+                                            '
+                                        />
                                     </button>
                                 </div>
-                            </div>    
-                        </div>
-
-                        <div className='p-6'>
-                            <div className='text-sm text-purple-600 font-semibold mb-2'>
-                                Project Category
                             </div>
-                            <h3 
-                                className='
-                                    text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600
-                                    transition-all duration-300
-                                '
-                            >
-                                Project Title
-                            </h3>
-                            <p className='text-gray-600 mb-4 leading-relaxed'>
-                                Project Description
-                            </p>
-
-                            <div className='flex flex-wrap gap-2 mb-4'>
-                                <span 
-                                    className='
-                                        px-3 py-1 bg-gradient-to-r from-purple-50 to-pink-50 
-                                        text-purple-600 text-xs font-medium rounded-full border border-purple-100
-                                    '
-                                >
-                                    Tags
-                                </span>
-                            </div>
-
-                            <button 
-                                className='
-                                    group/btn inline-flex items-center text-purple-600 font-semibold
-                                    hover:text-pink-600 transition-all duration-300
-                                '
-                            >
-                                View Project 
-                                <ArrowRight 
-                                    className='
-                                        ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300
-                                    '
-                                />
-                            </button>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
 
                 {/* Button CTA */}
