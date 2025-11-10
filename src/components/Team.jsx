@@ -1,3 +1,4 @@
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
 import React from 'react'
 
 function Team() {
@@ -94,11 +95,114 @@ function Team() {
                                     <div className='w-4 h-4 bg-white rounded-full animate-pulse'></div>
                                 </div>
                             </div>
+
+                            {/* Enhanced Member Info */}
+                            <div className='text-center mb-6'>
+                                <h3 
+                                    className='
+                                        text-2xl font-bold text-gray-900 mb-2 group-hover:text-transparent
+                                        group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600
+                                        group-hover:to-pink-600 transition-all duration-300
+                                    '
+                                >
+                                    Member Name
+                                </h3>
+                                <div
+                                    className={`
+                                        inline-block px-4 py-2 bg-gradient-to-r text-white text-sm 
+                                        font-bold rounded-full mb-4 shadow-lg        
+                                    `}
+                                >
+                                    Member Role
+                                </div>
+                                <p className='text-gray-700 text-sm leading-relaxed font-medium'>
+                                    Member Bio
+                                </p>
+                            </div>
+
+                            {/* Enhanced Specilities */}
+                            <div className='mb-6'>
+                                <div className='flex flex-wrap gap-1 justify-center'>
+                                    <span
+                                        className={`
+                                            px-3 py-1.5 bg-white backdrop-blur-sm text-gray-700 text-xs
+                                            font-semibold rounded-full border border-white/50 shadow-sm
+                                            hover:shadow-md hover:scale-105 transition-all duration-300 cursor-default
+                                        `}
+                                    >
+                                        Specialty
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Enhanced Social Links */}
+                            <div className='flex justify-center space-x-4'>
+                                <a
+                                    href=''
+                                    className='
+                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
+                                        rounded-2xl flex items-center justify-center hover:scale-125
+                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
+                                    '
+                                >
+                                    <Linkedin 
+                                        size={16}
+                                        className='
+                                            text-white group-hover:social:scale-110 transition-all duration-300
+                                        '
+                                    />
+                                </a>
+                                <a
+                                    href=''
+                                    className='
+                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
+                                        rounded-2xl flex items-center justify-center hover:scale-125
+                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
+                                    '
+                                >
+                                    <Twitter 
+                                        size={16}
+                                        className='
+                                            text-white group-hover:social:scale-110 transition-all duration-300
+                                        '
+                                    />
+                                </a>
+                                <a
+                                    href=''
+                                    className='
+                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
+                                        rounded-2xl flex items-center justify-center hover:scale-125
+                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
+                                    '
+                                >
+                                    <Github 
+                                        size={16}
+                                        className='
+                                            text-white group-hover:social:scale-110 transition-all duration-300
+                                        '
+                                    />
+                                </a>
+                                <a
+                                    href=''
+                                    className='
+                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
+                                        rounded-2xl flex items-center justify-center hover:scale-125
+                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
+                                    '
+                                >
+                                    <Mail 
+                                        size={16}
+                                        className='
+                                            text-white group-hover:social:scale-110 transition-all duration-300
+                                        '
+                                    />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
+                {/* Team Stats */}
             </div>
         </section>
     )
