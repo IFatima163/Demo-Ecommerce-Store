@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { Award, Coffee, Github, Linkedin, Mail, Twitter } from 'lucide-react'
 import React from 'react'
 
 function Team() {
@@ -203,6 +203,87 @@ function Team() {
                 </div>
 
                 {/* Team Stats */}
+                <div 
+                    className='
+                        mt-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 text-white
+                        relative overflow-hidden
+                    '
+                >
+                    <div className='absolute inset-0 bg-black/10'></div>
+                    <div className='relative z-10'>
+                        <div className='grid md:grid-cols-4 gap-8 text-center'>
+                            <div>
+                                <div className='flex items-center justify-center mb-2'>
+                                    <Award className='w-6 h-6 mr-2'/>
+                                    <span className='text-3xl font-bold'>
+                                        45+
+                                    </span>
+                                </div>
+                                <p className='text-purple-100'>
+                                    Awards Won
+                                </p>
+                            </div>
+                            <div>
+                                <div className='flex items-center justify-center mb-2'>
+                                    <Coffee className='w-6 h-6 mr-2'/>
+                                    <span className='text-3xl font-bold'>
+                                        10+
+                                    </span>
+                                </div>
+                                <p className='text-purple-100'>
+                                    Coffee Won
+                                </p>
+                            </div>
+                            <div>
+                                <div className='flex items-center justify-center mb-2'>
+                                    <span className='text-3xl font-bold'>
+                                        650+
+                                    </span>
+                                </div>
+                                <p className='text-purple-100'>
+                                    Projects Delivered
+                                </p>
+                            </div>
+                            <div>
+                                <div className='flex items-center justify-center mb-2'>
+                                    <span className='text-3xl font-bold'>
+                                        99%
+                                    </span>
+                                </div>
+                                <p className='text-purple-100'>
+                                    Client Satisfaction
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Button CTA */}
+                <div className='text-center mt-16'>
+                    <div 
+                        className='
+                            inline-flex justify-center items-center space-x-4 bg-white
+                            rounded-2xl p-6 text-white w-full shadow-lg border border-gray-100
+                        '
+                    >
+                        <div>
+                            <h3 className='text-lg font-semibold text-gray-900'>
+                                Want to Join Our Team
+                            </h3>
+                            <p className='text-gray-600 text-sm'>
+                                We're always looking for talented individuals
+                            </p>
+                        </div>
+                        <button 
+                            className='
+                                bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 
+                                rounded-xl font-semibold transition-colors duration-300 whitespace-nowrap
+                                hover:from-purple-700 hover:to-pink-700 hover:shadow-purple-500/25 hover:scale-102
+                            '
+                        >
+                            View Careers
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     )
