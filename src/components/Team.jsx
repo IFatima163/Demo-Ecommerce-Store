@@ -1,6 +1,77 @@
 import { Award, Coffee, Github, Linkedin, Mail, Twitter } from 'lucide-react'
 import React from 'react'
 
+const teamMembers = [
+    {
+        name: "Alexandra Chen",
+        role: "Creative Director",
+        image: 
+            "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400",
+        bio: "Award-winning creative director who transforms bold visions inro unforgettable brand experiences that resonate globally.",
+        specialties: ["Brand Strategy", "UI/ UX Design", "Creative Leadership"],
+        social: {
+            linkedin: "#",
+            twitter: "#",
+            github: "#",
+            email: "alex@nexus.com"
+        },
+        stats: {projects: "150+", awards: "12", experience: "12 years"},
+        gradient: "from-purple-500 to-pink-500",
+        bgGradient: "from-purple-50 to-pink-50" 
+    },
+    {
+        name: "Marcus Rodriguez",
+        role: "Lead Developer",
+        image: 
+            "https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400",
+        bio: "Full-stack wizard who builds lightning-fast, scalable applications that power the next generation of digital experiences.",
+        specialties: ["React/Next.js", "Node.js", "Cloud Architecture"],
+        social: {
+            linkedin: "#",
+            twitter: "#",
+            github: "#",
+            email: "marcus@nexus.com"
+        },
+        stats: {projects: "200+", awards: "8", experience: "10 years"},
+        gradient: "from-blue-500 to-cyan-500",
+        bgGradient: "from-blue-50 to-cyan-50" 
+    },
+    {
+        name: "Sophia Kim",
+        role: "UX Strategist",
+        image: 
+            "https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=400",
+        bio: "Human-centered design advocate who crafts intuitive experiences that make complex interactions feel effortless.",
+        specialties: ["User Research", "Interaction Design", "Accessibility"],
+        social: {
+            linkedin: "#",
+            twitter: "#",
+            github: "#",
+            email: "sophia@nexus.com"
+        },
+        stats: {projects: "120+", awards: "15", experience: "9 years"},
+        gradient: "from-green-500 to-teal-500",
+        bgGradient: "from-green-50 to-teal-50" 
+    },
+    {
+        name: "David Thompson",
+        role: "Growth Strategist",
+        image: 
+            "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400",
+        bio: "Growth hacker extraordinaire who turns data into actionable insights that drive exponential business growth.",
+        specialties: ["Growth Hacking", "Analytics", "Conversion Optimization"],
+        social: {
+            linkedin: "#",
+            twitter: "#",
+            github: "#",
+            email: "david@nexus.com"
+        },
+        stats: {projects: "180+", awards: "10", experience: "11 years"},
+        gradient: "from-orange-500 to-red-500",
+        bgGradient: "from-orange-50 to-red-50" 
+    },
+]
+
 function Team() {
     return (
         <section id='team' className='py-20 bg-white relative overflow-hidden'>
