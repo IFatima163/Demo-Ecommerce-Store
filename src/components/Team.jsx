@@ -116,161 +116,170 @@ function Team() {
                 </div>
 
                 <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
-                    <div 
-                        className={`
-                            group bg-gradient-to-br rounded-3xl p-5 shadow-xl hover:shadow-2xl transition-all
-                            duration-500 hover:-translate-y-3 border border-white/50 relative overflow-hidden 
-                            backdrop-blur-sm                            
-                        `}                    
-                    >
-                        {/* Animated Background Elements */}
-                        <div
-                            className={`
-                                absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br rounded-full 
-                                opacity-20 group-hover:scale-125 group-hover:rotate-45
-                            `}
-                        ></div>
-                        <div
-                            className={`
-                                absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr rounded-full 
-                                opacity-10 group-hover:scale-150 transition-all duration-500
-                            `}
-                        ></div>
-
-                        <div className='relative z-10'>
-                            {/* Enhanced Profile Image */}
-                            <div className='relative mb-8'>
-                                <div 
-                                    className='
-                                        w-28 h-28 mx-auto rounded-3xl overflow-hidden right-4 right-w 
-                                        shadow-2xl group-hover:scale-110 group-hover:rotate-3 
-                                        transition-all duration-500
-                                    '
-                                >
-                                    <img
-                                        src=''
-                                        alt=''
-                                        className='
-                                            w-full h-full object-cover group-hover:scale-110 transition-all duration-500
-                                        '
-                                    />
-                                </div>
-                                {/* Stats Indicator */}
+                    {teamMembers.map((member, index) => {
+                        return(
+                            <div 
+                                className={`
+                                    group bg-gradient-to-br rounded-3xl p-5 shadow-xl hover:shadow-2xl transition-all
+                                    duration-500 hover:-translate-y-3 border border-white/50 relative overflow-hidden 
+                                    backdrop-blur-sm ${member.bgGradient}                           
+                                `}                    
+                            >
+                                {/* Animated Background Elements */}
                                 <div
                                     className={`
-                                        absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r rounded-full
-                                        flex items-center justify-center shadow-lg group-hover:scale-110 
-                                        transition-all duration-300
+                                        absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br rounded-full 
+                                        opacity-20 group-hover:scale-125 group-hover:rotate-45 ${member.gradient}  
                                     `}
-                                >
-                                    <div className='w-4 h-4 bg-white rounded-full animate-pulse'></div>
-                                </div>
-                            </div>
-
-                            {/* Enhanced Member Info */}
-                            <div className='text-center mb-6'>
-                                <h3 
-                                    className='
-                                        text-2xl font-bold text-gray-900 mb-2 group-hover:text-transparent
-                                        group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600
-                                        group-hover:to-pink-600 transition-all duration-300
-                                    '
-                                >
-                                    Member Name
-                                </h3>
+                                ></div>
                                 <div
                                     className={`
-                                        inline-block px-4 py-2 bg-gradient-to-r text-white text-sm 
-                                        font-bold rounded-full mb-4 shadow-lg        
+                                        absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr rounded-full 
+                                        opacity-10 group-hover:scale-150 transition-all duration-500 ${member.gradient}
                                     `}
-                                >
-                                    Member Role
-                                </div>
-                                <p className='text-gray-700 text-sm leading-relaxed font-medium'>
-                                    Member Bio
-                                </p>
-                            </div>
+                                ></div>
 
-                            {/* Enhanced Specilities */}
-                            <div className='mb-6'>
-                                <div className='flex flex-wrap gap-1 justify-center'>
-                                    <span
-                                        className={`
-                                            px-3 py-1.5 bg-white backdrop-blur-sm text-gray-700 text-xs
-                                            font-semibold rounded-full border border-white/50 shadow-sm
-                                            hover:shadow-md hover:scale-105 transition-all duration-300 cursor-default
-                                        `}
-                                    >
-                                        Specialty
-                                    </span>
+                                <div className='relative z-10'>
+                                    {/* Enhanced Profile Image */}
+                                    <div className='relative mb-8'>
+                                        <div 
+                                            className='
+                                                w-28 h-28 mx-auto rounded-3xl overflow-hidden right-4 right-w 
+                                                shadow-2xl group-hover:scale-110 group-hover:rotate-3 
+                                                transition-all duration-500
+                                            '
+                                        >
+                                            <img
+                                                src= {member.image}
+                                                alt= {member.name}
+                                                className='
+                                                    w-full h-full object-cover group-hover:scale-110 transition-all duration-500
+                                                '
+                                            />
+                                        </div>
+                                        {/* Stats Indicator */}
+                                        <div
+                                            className={`
+                                                absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r rounded-full
+                                                flex items-center justify-center shadow-lg group-hover:scale-110 
+                                                transition-all duration-300 ${member.gradient}
+                                            `}
+                                        >
+                                            <div className='w-4 h-4 bg-white rounded-full animate-pulse'></div>
+                                        </div>
+                                    </div>
+
+                                    {/* Enhanced Member Info */}
+                                    <div className='text-center mb-6'>
+                                        <h3 
+                                            className='
+                                                text-2xl font-bold text-gray-900 mb-2 group-hover:text-transparent
+                                                group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600
+                                                group-hover:to-pink-600 transition-all duration-300
+                                            '
+                                        >
+                                            {member.name}
+                                        </h3>
+                                        <div
+                                            className={`
+                                                inline-block px-4 py-2 bg-gradient-to-r text-white text-sm 
+                                                font-bold rounded-full mb-4 shadow-lg ${member.gradient}
+                                            `}
+                                        >
+                                            {member.role}
+                                        </div>
+                                        <p className='text-gray-700 text-sm leading-relaxed font-medium'>
+                                            {member.bio}
+                                        </p>
+                                    </div>
+
+                                    {/* Enhanced Specilities */}
+                                    <div className='mb-6'>
+                                        <div className='flex flex-wrap gap-1 justify-center'>
+                                            {member.specialties.map((specialty, sepcIndex) => {
+                                                return (
+                                                    <span
+                                                        className={`
+                                                            px-3 py-1.5 bg-white backdrop-blur-sm text-gray-700 text-xs
+                                                            font-semibold rounded-full border border-white/50 shadow-sm
+                                                            hover:shadow-md hover:scale-105 transition-all duration-300 cursor-default
+                                                        `}
+                                                    >
+                                                        {specialty}
+                                                    </span>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+
+                                    {/* Enhanced Social Links */}
+                                    <div className='flex justify-center space-x-4'>
+                                        <a
+                                            href={member.social.linkedin}
+                                            className='
+                                                group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
+                                                rounded-2xl flex items-center justify-center hover:scale-125
+                                                hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
+                                            '
+                                        >
+                                            <Linkedin 
+                                                size={16}
+                                                className='
+                                                    text-white group-hover:social:scale-110 transition-all duration-300
+                                                '
+                                            />
+                                        </a>
+                                        <a
+                                            href={member.social.twitter}
+                                            className='
+                                                group/social w-10 h-10 bg-gradient-to-r from-sky-400 to-sky-500
+                                                rounded-2xl flex items-center justify-center hover:scale-125
+                                                hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
+                                            '
+                                        >
+                                            <Twitter 
+                                                size={16}
+                                                className='
+                                                    text-white group-hover:social:scale-110 transition-all duration-300
+                                                '
+                                            />
+                                        </a>
+                                        <a
+                                            href={member.social.github}
+                                            className='
+                                                group/social w-10 h-10 bg-gradient-to-r from-gray-700 to-gray-800
+                                                rounded-2xl flex items-center justify-center hover:scale-125
+                                                hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
+                                            '
+                                        >
+                                            <Github 
+                                                size={16}
+                                                className='
+                                                    text-white group-hover:social:scale-110 transition-all duration-300
+                                                '
+                                            />
+                                        </a>
+                                        <a
+                                            href={member.social.email}
+                                            className={`
+                                                group/social w-10 h-10 bg-gradient-to-r rounded-2xl flex 
+                                                items-center justify-center hover:scale-125 hover:rotate-12 
+                                                transition-all duration-300 shadow-lg hover:shadow-xl
+                                                ${member.gradient}
+                                            `}
+                                        >
+                                            <Mail 
+                                                size={16}
+                                                className='
+                                                    text-white group-hover:social:scale-110 transition-all duration-300
+                                                '
+                                            />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-
-                            {/* Enhanced Social Links */}
-                            <div className='flex justify-center space-x-4'>
-                                <a
-                                    href=''
-                                    className='
-                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
-                                        rounded-2xl flex items-center justify-center hover:scale-125
-                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
-                                    '
-                                >
-                                    <Linkedin 
-                                        size={16}
-                                        className='
-                                            text-white group-hover:social:scale-110 transition-all duration-300
-                                        '
-                                    />
-                                </a>
-                                <a
-                                    href=''
-                                    className='
-                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
-                                        rounded-2xl flex items-center justify-center hover:scale-125
-                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
-                                    '
-                                >
-                                    <Twitter 
-                                        size={16}
-                                        className='
-                                            text-white group-hover:social:scale-110 transition-all duration-300
-                                        '
-                                    />
-                                </a>
-                                <a
-                                    href=''
-                                    className='
-                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
-                                        rounded-2xl flex items-center justify-center hover:scale-125
-                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
-                                    '
-                                >
-                                    <Github 
-                                        size={16}
-                                        className='
-                                            text-white group-hover:social:scale-110 transition-all duration-300
-                                        '
-                                    />
-                                </a>
-                                <a
-                                    href=''
-                                    className='
-                                        group/social w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600
-                                        rounded-2xl flex items-center justify-center hover:scale-125
-                                        hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl
-                                    '
-                                >
-                                    <Mail 
-                                        size={16}
-                                        className='
-                                            text-white group-hover:social:scale-110 transition-all duration-300
-                                        '
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
 
                 {/* Team Stats */}
