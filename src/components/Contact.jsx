@@ -62,6 +62,120 @@ function Contact() {
                     </div>
                     <h3 className='text-lg font-bold text-gray-900 mb-2'>Title</h3>
                     <p className='text-gray-600 text-sm mb-3'>Description</p>
+
+                    <div className='space-y-1'>
+                        <p className='text-gray-700 text-sm font-medium'>Details</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className='grid lg:grid-cols-2 gap-12'>
+                <div className='bg-white rounded-3xl shadow-xl p-8 border border-gray-100'>
+                    <div className='mb-8'>
+                        <h3 className='text-2xl font-black text-gray-900 mb-2'>
+                            Send us a Message
+                        </h3>
+                        <p className='text-gray-600'>
+                            Fill out the form below and we'll get back to you within hours
+                        </p>
+                    </div>
+
+                    <form>
+                        <div className='grid md:grid-cols-2 gap-6'>
+                            <div>
+                                <label
+                                    htmlFor=''
+                                    className='block text-sm font-semibold text-gray-700 mb-2'
+                                >
+                                    Full Name *
+                                </label>
+                                <input
+                                    type='text'
+                                    className='
+                                        w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                        focus:ring-purple-500 focus:border-transparent transition-all 
+                                        duration-300 bg-gray-50 focus:bg-white
+                                    '
+                                    placeholder='John Doe'
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor=''
+                                    className='block text-sm font-semibold text-gray-700 mb-2'
+                                >
+                                    Email Address *
+                                </label>
+                                <input
+                                    type='text'
+                                    className='
+                                        w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                        focus:ring-purple-500 focus:border-transparent transition-all 
+                                        duration-300 bg-gray-50 focus:bg-white
+                                    '
+                                    placeholder='john@company.com'
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor=''
+                                    className='block text-sm font-semibold text-gray-700 mb-2'
+                                >
+                                    Full Name *
+                                </label>
+                                <input
+                                    type='text'
+                                    className='
+                                        w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                        focus:ring-purple-500 focus:border-transparent transition-all 
+                                        duration-300 bg-gray-50 focus:bg-white
+                                    '
+                                    placeholder='John Doe'
+                                />
+                            </div>
+                            <div className='grid md:grid-cols-2 gap-6'>
+                                <div>
+                                    <label
+                                        htmlFor=''
+                                        className='block text-sm font-semibold text-gray-700 mb-2'
+                                    >
+                                        Company *
+                                    </label>
+                                    <input
+                                        type='text'
+                                        className='
+                                            w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                            focus:ring-purple-500 focus:border-transparent transition-all 
+                                            duration-300 bg-gray-50 focus:bg-white
+                                        '
+                                        placeholder='your company'
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        htmlFor=''
+                                        className='block text-sm font-semibold text-gray-700 mb-2'
+                                    >
+                                        Project Budget *
+                                    </label>
+                                    <select 
+                                        className='
+                                            w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                            focus:ring-purple-500 focus:border-transparent transition-all 
+                                            duration-300 bg-gray-50 focus:bg-white
+                                        '
+                                    >
+                                        <option value=''>Select Your Budget Range</option>
+                                        <option value='5k-10k'>$5 - $10K</option>
+                                        <option value='10k-25k'>$10 - $25K</option>
+                                        <option value='25k-50k'>$25 - $50K</option>
+                                        <option value='50k+'>$50K+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
