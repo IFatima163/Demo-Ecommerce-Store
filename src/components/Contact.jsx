@@ -1,4 +1,4 @@
-import { Send, User } from 'lucide-react'
+import { Calendar, Clock, MessageCircle, Send, User } from 'lucide-react'
 import React from 'react'
 
 function Contact() {
@@ -81,7 +81,7 @@ function Contact() {
                         </p>
                     </div>
 
-                    <form>
+                    <form className='space-y-6'>
                         <div className='grid md:grid-cols-2 gap-6'>
                             <div>
                                 <label
@@ -206,6 +206,86 @@ function Contact() {
                         </button>
                     </form>
                 </div>
+
+                {/* Additional Info */}
+                <div className='space-y-8'>
+                    <div 
+                        className='
+                            bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl 
+                            p-8 text-white relative overflow-hidden
+                        '
+                    >
+                        <div 
+                            className='
+                                absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full
+                                -translate-y-16 translate-x-16
+                            '
+                        ></div>
+                        <div className='relative z-10'>
+                            <h3 className='text-2xl font-bold mb-4'>
+                                Quick Actions
+                            </h3>
+                            <div className='space-y-4'>
+                                <button 
+                                    className='
+                                        w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white
+                                        p-4 rounded-2xl transition-all duration-300 flex items-center
+                                    '
+                                >
+                                    <Calendar size={20} className='mr-3'/>
+                                    <div className='text-left'>
+                                        <div className='font-semibold'>
+                                            Schedule a Call
+                                        </div>
+                                        <div className='text-sm text-purple-100'>
+                                            Book a free consultation
+                                        </div>
+                                    </div>
+                                </button>
+                                <button 
+                                    className='
+                                        w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white
+                                        p-4 rounded-2xl transition-all duration-300 flex items-center
+                                    '
+                                >
+                                    <MessageCircle size={20} className='mr-3'/>
+                                    <div className='text-left'>
+                                        <div className='font-semibold'>
+                                            Live Chat
+                                        </div>
+                                        <div className='text-sm text-purple-100'>
+                                            Chat with our team now
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Response Time */}
+                    <div className='bg-white rounded-2xl p-6 shadow-lg border border-gray-100'>
+                        <div className='flex items-center mb-4'>
+                            <Clock className='w-6 h-6 text-purple-600 mr-2'/>
+                            <h3 className='text-lg font-bold text-gray-900'>
+                                Response Time
+                            </h3>
+                        </div>
+                        <div className='flex justify-between items-center'>
+                            <span className='text-gray-600'>Email inquires</span>
+                            <span className='font-semibold'>Within 2 hours</span>
+                        </div>
+                        <div className='flex justify-between items-center'>
+                            <span className='text-gray-600'>Project proposals</span>
+                            <span className='font-semibold'>Within 24 hours</span>
+                        </div>
+                        <div className='flex justify-between items-center'>
+                            <span className='text-gray-600'>Phone calls</span>
+                            <span className='font-semibold'>Same Day</span>
+                        </div>
+                    </div>
+                </div>       
+
+                {/* FAQ */}
             </div>
         </div>
     </section>
