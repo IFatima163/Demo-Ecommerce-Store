@@ -1,4 +1,4 @@
-import { User } from 'lucide-react'
+import { Send, User } from 'lucide-react'
 import React from 'react'
 
 function Contact() {
@@ -117,12 +117,31 @@ function Contact() {
                                     placeholder='john@company.com'
                                 />
                             </div>
+                        </div>                        
+                        <div>
+                            <label
+                                htmlFor=''
+                                className='block text-sm font-semibold text-gray-700 mb-2'
+                            >
+                                Full Name *
+                            </label>
+                            <input
+                                type='text'
+                                className='
+                                    w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                    focus:ring-purple-500 focus:border-transparent transition-all 
+                                    duration-300 bg-gray-50 focus:bg-white
+                                '
+                                placeholder='John Doe'
+                            />
+                        </div>
+                        <div className='grid md:grid-cols-2 gap-6'>
                             <div>
                                 <label
                                     htmlFor=''
                                     className='block text-sm font-semibold text-gray-700 mb-2'
                                 >
-                                    Full Name *
+                                    Company *
                                 </label>
                                 <input
                                     type='text'
@@ -131,50 +150,60 @@ function Contact() {
                                         focus:ring-purple-500 focus:border-transparent transition-all 
                                         duration-300 bg-gray-50 focus:bg-white
                                     '
-                                    placeholder='John Doe'
+                                    placeholder='your company'
                                 />
                             </div>
-                            <div className='grid md:grid-cols-2 gap-6'>
-                                <div>
-                                    <label
-                                        htmlFor=''
-                                        className='block text-sm font-semibold text-gray-700 mb-2'
-                                    >
-                                        Company *
-                                    </label>
-                                    <input
-                                        type='text'
-                                        className='
-                                            w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
-                                            focus:ring-purple-500 focus:border-transparent transition-all 
-                                            duration-300 bg-gray-50 focus:bg-white
-                                        '
-                                        placeholder='your company'
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        htmlFor=''
-                                        className='block text-sm font-semibold text-gray-700 mb-2'
-                                    >
-                                        Project Budget *
-                                    </label>
-                                    <select 
-                                        className='
-                                            w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
-                                            focus:ring-purple-500 focus:border-transparent transition-all 
-                                            duration-300 bg-gray-50 focus:bg-white
-                                        '
-                                    >
-                                        <option value=''>Select Your Budget Range</option>
-                                        <option value='5k-10k'>$5 - $10K</option>
-                                        <option value='10k-25k'>$10 - $25K</option>
-                                        <option value='25k-50k'>$25 - $50K</option>
-                                        <option value='50k+'>$50K+</option>
-                                    </select>
-                                </div>
+                            <div>
+                                <label
+                                    htmlFor=''
+                                    className='block text-sm font-semibold text-gray-700 mb-2'
+                                >
+                                    Project Budget *
+                                </label>
+                                <select 
+                                    className='
+                                        w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                        focus:ring-purple-500 focus:border-transparent transition-all 
+                                        duration-300 bg-gray-50 focus:bg-white
+                                    '
+                                >
+                                    <option value=''>Select Your Budget Range</option>
+                                    <option value='5k-10k'>$5 - $10K</option>
+                                    <option value='10k-25k'>$10 - $25K</option>
+                                    <option value='25k-50k'>$25 - $50K</option>
+                                    <option value='50k+'>$50K+</option>
+                                </select>
                             </div>
                         </div>
+                        <div>
+                            <label
+                                htmlFor=''
+                                className='block text-sm font-semibold text-gray-700 mb-2'
+                            >
+                                Project Details *
+                            </label>
+                            <textarea
+                                type='text'
+                                className='
+                                    w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
+                                    focus:ring-purple-500 focus:border-transparent transition-all 
+                                    duration-300 bg-gray-50 focus:bg-white
+                                '
+                                placeholder='your company'
+                            ></textarea>
+                        </div>
+                        <button
+                            type='submit'
+                            className='
+                                w-fit bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700
+                                hover:to-pink-700 text-white px-6 py-4 rounded-xl font-semibold
+                                transition-all duration-300 flex items-center justify-center shadow-lg
+                                hover:shadow-xl hover:scale-105
+                            '
+                        >
+                            Send Message
+                            <Send className='ml-2' size={20}/>
+                        </button>
                     </form>
                 </div>
             </div>
