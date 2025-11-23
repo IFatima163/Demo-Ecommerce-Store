@@ -270,23 +270,56 @@ function Contact() {
                                 Response Time
                             </h3>
                         </div>
-                        <div className='flex justify-between items-center'>
+                        <div className='flex justify-between items-center space-y-2'>
                             <span className='text-gray-600'>Email inquires</span>
                             <span className='font-semibold'>Within 2 hours</span>
                         </div>
-                        <div className='flex justify-between items-center'>
+                        <div className='flex justify-between items-center space-y-2'>
                             <span className='text-gray-600'>Project proposals</span>
                             <span className='font-semibold'>Within 24 hours</span>
                         </div>
-                        <div className='flex justify-between items-center'>
+                        <div className='flex justify-between items-center space-y-2'>
                             <span className='text-gray-600'>Phone calls</span>
                             <span className='font-semibold'>Same Day</span>
                         </div>
                     </div>
-                </div>       
 
-                {/* FAQ */}
+                    {/* FAQ */}
+                    <div className='bg-white rounded-2xl p-6 shadow-lg border border-gray-100'>
+                        <h3 className='text-lg font-bold text-gray-900 mb-4'>
+                            Frequently Asked
+                        </h3>
+                        <div className='space-y-3'>
+                            <div>
+                                <h4 className='font-semibold text-gray-900 text-sm'>
+                                    How long does a typical project take?
+                                </h4>
+                                <p className='text-gray-600 text-sm'>
+                                    Most projects are completed within 4-12 weeks, depending on scope and complexity.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 className='font-semibold text-gray-900 text-sm'>
+                                    Do you work with startups?
+                                </h4>
+                                <p className='text-gray-600 text-sm'>
+                                    Absolutely! We love working with startups and offer flexible pricing options.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 className='font-semibold text-gray-900 text-sm'>
+                                    What's included in your services?
+                                </h4>
+                                <p className='text-gray-600 text-sm'>
+                                    We provide end-to-end solutions including design, development, and ongoing support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
             </div>
+
+            {/* Newsletter */}
         </div>
     </section>
   )
