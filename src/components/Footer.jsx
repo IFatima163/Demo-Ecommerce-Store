@@ -1,4 +1,4 @@
-import { Facebook, InstagramIcon, Linkedin, Sparkles, Twitter } from 'lucide-react'
+import { ArrowUp, Facebook, InstagramIcon, Linkedin, Mail, MapPin, Phone, Sparkles, Twitter } from 'lucide-react'
 import React from 'react'
 
 function Footer() {
@@ -139,9 +139,77 @@ function Footer() {
                         </div>
 
                         {/* Contact Info */}
+                        <div>
+                            <h4 className='text-lg font-bold mb-6 text-white'>Get in Touch</h4>
+                            <div className='space-y-4'>
+                                <div className='flex items-start space-x-3'>
+                                    <div 
+                                        className='
+                                            w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
+                                            flex items-center justify-center flex-shrink-0 mt-0.5
+                                        '
+                                    >
+                                        <Mail size={14}/>
+                                    </div>
+                                    <div>
+                                        <p className='text-white font-medium'>hello@nexus.com</p>
+                                        <p className='text-gray-300 text-sm'>support@nexus.com</p>
+                                    </div>
+                                </div>
+                                <div className='flex items-start space-x-3'>
+                                    <div 
+                                        className='
+                                            w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
+                                            flex items-center justify-center flex-shrink-0 mt-0.5
+                                        '
+                                    >
+                                        <Phone size={14}/>
+                                    </div>
+                                    <div>
+                                        <p className='text-white font-medium'>+1(555)123-4567</p>
+                                        <p className='text-gray-300 text-sm'>Mon-Fri 9AM-6PM EST</p>
+                                    </div>
+                                </div>
+                                <div className='flex items-start space-x-3'>
+                                    <div 
+                                        className='
+                                            w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
+                                            flex items-center justify-center flex-shrink-0 mt-0.5
+                                        '
+                                    >
+                                        <MapPin size={14}/>
+                                    </div>
+                                    <div>
+                                        <p className='text-white font-medium'>123 Innovation Street</p>
+                                        <p className='text-gray-300 text-sm'>San Fransisco, CA 94105</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                {/* Bottom Bar */}
+                <div 
+                    className='
+                        border-t border-gray-700/50 pt-8 flex flex-col md:flex-row justify-between items-center
+                    '
+                >
+                    <div className='text-gray-300 text-sm mb-4 md:mb-0'>
+                        <p>
+                            2025 Nexus. All right reserved. | Privacy Policy | Terms of Services | Cookie Policy
+                        </p>
+                    </div>
+                    <button 
+                        className='
+                            w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex
+                            items-center justify-center hover:scale-110 transition-all duration-300
+                        '
+                    >
+                        <ArrowUp size={18}/>
+                    </button>
+                </div>
+            </div>            
         </footer>
     )
 }
