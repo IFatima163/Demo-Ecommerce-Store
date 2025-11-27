@@ -1,7 +1,29 @@
 import { ArrowUp, Facebook, InstagramIcon, Linkedin, Mail, MapPin, Phone, Sparkles, Twitter } from 'lucide-react'
 import React from 'react'
 
+const company = [
+    "About Us",
+    "Our Team",
+    "Careers",
+    "Case Studies",
+    "Blog",
+    "Press Kit",
+]
+
+const services = [
+    "Brand & Design",
+    "Web Development",
+    "Mobile Apps",
+    "Digital Marketing",
+    "Analytics & Insights",
+    "Digital Strategy",
+]
+
 function Footer() {
+    const scrollToTop = () => {
+        window.scrollTo({top: 0, behavior: "smooth"})
+    }
+
     return (
         <footer
             className='
@@ -94,23 +116,27 @@ function Footer() {
                     <div>
                         <h4 className='text-lg font-bold mb-6 text-white'>Services</h4>
                         <ul className='space-y-3'>
-                            <li>
-                                <a
-                                    href='#'
-                                    className='
-                                        text-gray-300 hover:text-purple-400 transition-all 
-                                        duration-300 flex items-center group
-                                    '
-                                >
-                                    <span
-                                        className='
-                                            w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
-                                            transition-all duration-300
-                                        '
-                                    ></span>
-                                    Services
-                                </a>
-                            </li>
+                            {services.map((item, index) => {
+                                return (
+                                    <li key={index}>
+                                        <a
+                                            href='#'
+                                            className='
+                                                text-gray-300 hover:text-purple-400 transition-all 
+                                                duration-300 flex items-center group
+                                            '
+                                        >
+                                            <span
+                                                className='
+                                                    w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
+                                                    transition-all duration-300
+                                                '
+                                            ></span>
+                                            {item}
+                                        </a>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </div>
 
@@ -118,23 +144,27 @@ function Footer() {
                     <div>
                         <h4 className='text-lg font-bold mb-6 text-white'>Company</h4>
                         <ul className='space-y-3'>
-                            <li>
-                                <a
-                                    href='#'
-                                    className='
-                                        text-gray-300 hover:text-purple-400 transition-all 
-                                        duration-300 flex items-center group
-                                    '
-                                >
-                                    <span
-                                        className='
-                                            w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
-                                            transition-all duration-300
-                                        '
-                                    ></span>
-                                    Company
-                                </a>
-                            </li>
+                            {company.map((com, comindex) => {
+                                return (
+                                    <li key={comindex}>
+                                        <a
+                                            href='#'
+                                            className='
+                                                text-gray-300 hover:text-purple-400 transition-all 
+                                                duration-300 flex items-center group
+                                            '
+                                        >
+                                            <span
+                                                className='
+                                                    w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
+                                                    transition-all duration-300
+                                                '
+                                            ></span>
+                                            {com}
+                                        </a>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </div>
 
@@ -187,27 +217,28 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Bottom Bar */}
-            <div 
-                className='
-                    border-t border-gray-700/50 pt-8 flex flex-col md:flex-row justify-between items-center
-                '
-            >
-                <div className='text-gray-300 text-sm mb-4 md:mb-0'>
-                    <p>
-                        2025 Nexus. All right reserved. | Privacy Policy | Terms of Services | Cookie Policy
-                    </p>
-                </div>
-                <button 
+                {/* Bottom Bar */}
+                <div 
                     className='
-                        w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex
-                        items-center justify-center hover:scale-110 transition-all duration-300
+                        border-t border-gray-700/50 pt-8 flex flex-col md:flex-row justify-between items-center
                     '
                 >
-                    <ArrowUp size={18}/>
-                </button>
+                    <div className='text-gray-300 text-sm mb-4 md:mb-0'>
+                        <p>
+                            2025 Nexus. All right reserved. | Privacy Policy | Terms of Services | Cookie Policy
+                        </p>
+                    </div>
+                    <button 
+                        className='
+                            w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex
+                            items-center justify-center hover:scale-110 transition-all duration-300
+                        '
+                        onClick={scrollToTop}
+                    >
+                        <ArrowUp size={18}/>
+                    </button>
+                </div>
             </div>
         </footer>
     )
