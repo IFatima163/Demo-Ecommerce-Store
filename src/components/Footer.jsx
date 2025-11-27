@@ -23,6 +23,7 @@ function Footer() {
                     '
                 ></div>
             </div>
+
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10'>
                 <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>
                     <div className='lg:col-span-1'>
@@ -35,181 +36,179 @@ function Footer() {
                                         to-purple-500 rounded-full animate-pulse
                                     '
                                 ></div>
-                                <h3
-                                    className='
-                                        text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400
-                                        bg-clip-text text-transparent
-                                    '
-                                >
-                                    Nexus
-                                </h3>
                             </div>
+                            <h3
+                                className='
+                                    text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400
+                                    bg-clip-text text-transparent
+                                '
+                            >
+                                Nexus
+                            </h3>
+                        </div>
 
-                            <p className='text-gray-300 mb-6 leading-relaxed'>
-                                Transforming ideas into extraordinary digital experiences through innovative design, cutting-edge technology, and strategic thinking.
-                            </p>
-                            <div className='flex space-x-4'>
+                        <p className='text-gray-300 mb-6 leading-relaxed'>
+                            Transforming ideas into extraordinary digital experiences through innovative design, cutting-edge technology, and strategic thinking.
+                        </p>
+                        <div className='flex space-x-4'>
+                            <a
+                                href='#'
+                                className='
+                                    w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl
+                                    flex items-center justify-center hover:scale-110 transition-all duration-300
+                                '
+                            >
+                                <Facebook size={18}/>
+                            </a>
+                            <a
+                                href='#'
+                                className='
+                                    w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl
+                                    flex items-center justify-center hover:scale-110 transition-all duration-300
+                                '
+                            >
+                                <Twitter size={18}/>
+                            </a>
+                            <a
+                                href='#'
+                                className='
+                                    w-10 h-10 bg-gradient-to-r from-pink-600 to-red-600 rounded-xl
+                                    flex items-center justify-center hover:scale-110 transition-all duration-300
+                                '
+                            >
+                                <InstagramIcon size={18}/>
+                            </a>
+                            <a
+                                href='#'
+                                className='
+                                    w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl
+                                    flex items-center justify-center hover:scale-110 transition-all duration-300
+                                '
+                            >
+                                <Linkedin size={18}/>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Services */}
+                    <div>
+                        <h4 className='text-lg font-bold mb-6 text-white'>Services</h4>
+                        <ul className='space-y-3'>
+                            <li>
                                 <a
                                     href='#'
                                     className='
-                                        w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl
-                                        flex items-center justify-center hover:scale-110 transition-all duration-300
+                                        text-gray-300 hover:text-purple-400 transition-all 
+                                        duration-300 flex items-center group
                                     '
                                 >
-                                    <Facebook size={18}/>
+                                    <span
+                                        className='
+                                            w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
+                                            transition-all duration-300
+                                        '
+                                    ></span>
+                                    Services
                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Company */}
+                    <div>
+                        <h4 className='text-lg font-bold mb-6 text-white'>Company</h4>
+                        <ul className='space-y-3'>
+                            <li>
                                 <a
                                     href='#'
                                     className='
-                                        w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl
-                                        flex items-center justify-center hover:scale-110 transition-all duration-300
+                                        text-gray-300 hover:text-purple-400 transition-all 
+                                        duration-300 flex items-center group
                                     '
                                 >
-                                    <Twitter size={18}/>
+                                    <span
+                                        className='
+                                            w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
+                                            transition-all duration-300
+                                        '
+                                    ></span>
+                                    Company
                                 </a>
-                                <a
-                                    href='#'
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div>
+                        <h4 className='text-lg font-bold mb-6 text-white'>Get in Touch</h4>
+                        <div className='space-y-4'>
+                            <div className='flex items-start space-x-3'>
+                                <div 
                                     className='
-                                        w-10 h-10 bg-gradient-to-r from-pink-600 to-red-600 rounded-xl
-                                        flex items-center justify-center hover:scale-110 transition-all duration-300
+                                        w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
+                                        flex items-center justify-center flex-shrink-0 mt-0.5
                                     '
                                 >
-                                    <InstagramIcon size={18}/>
-                                </a>
-                                <a
-                                    href='#'
-                                    className='
-                                        w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl
-                                        flex items-center justify-center hover:scale-110 transition-all duration-300
-                                    '
-                                >
-                                    <Linkedin size={18}/>
-                                </a>
+                                    <Mail size={14}/>
+                                </div>
+                                <div>
+                                    <p className='text-white font-medium'>hello@nexus.com</p>
+                                    <p className='text-gray-300 text-sm'>support@nexus.com</p>
+                                </div>
                             </div>
-                        </div>
-
-                        {/* Services */}
-                        <div>
-                            <h4 className='text-lg font-bold mb-6 text-white'>Services</h4>
-                            <ul className='space-y-3'>
-                                <li>
-                                    <a
-                                        href='#'
-                                        className='
-                                            text-gray-300 hover:text-purple-400 transition-all 
-                                            duration-300 flex items-center group
-                                        '
-                                    >
-                                        <span
-                                            className='
-                                                w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
-                                                transition-all duration-300
-                                            '
-                                        >
-                                            Services
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Company */}
-                        <div>
-                            <h4 className='text-lg font-bold mb-6 text-white'>Services</h4>
-                            <ul className='space-y-3'>
-                                <li>
-                                    <a
-                                        href='#'
-                                        className='
-                                            text-gray-300 hover:text-purple-400 transition-all 
-                                            duration-300 flex items-center group
-                                        '
-                                    >
-                                        <span
-                                            className='
-                                                w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150
-                                                transition-all duration-300
-                                            '
-                                        >
-                                            Company
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Contact Info */}
-                        <div>
-                            <h4 className='text-lg font-bold mb-6 text-white'>Get in Touch</h4>
-                            <div className='space-y-4'>
-                                <div className='flex items-start space-x-3'>
-                                    <div 
-                                        className='
-                                            w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
-                                            flex items-center justify-center flex-shrink-0 mt-0.5
-                                        '
-                                    >
-                                        <Mail size={14}/>
-                                    </div>
-                                    <div>
-                                        <p className='text-white font-medium'>hello@nexus.com</p>
-                                        <p className='text-gray-300 text-sm'>support@nexus.com</p>
-                                    </div>
+                            <div className='flex items-start space-x-3'>
+                                <div 
+                                    className='
+                                        w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
+                                        flex items-center justify-center flex-shrink-0 mt-0.5
+                                    '
+                                >
+                                    <Phone size={14}/>
                                 </div>
-                                <div className='flex items-start space-x-3'>
-                                    <div 
-                                        className='
-                                            w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
-                                            flex items-center justify-center flex-shrink-0 mt-0.5
-                                        '
-                                    >
-                                        <Phone size={14}/>
-                                    </div>
-                                    <div>
-                                        <p className='text-white font-medium'>+1(555)123-4567</p>
-                                        <p className='text-gray-300 text-sm'>Mon-Fri 9AM-6PM EST</p>
-                                    </div>
+                                <div>
+                                    <p className='text-white font-medium'>+1(555)123-4567</p>
+                                    <p className='text-gray-300 text-sm'>Mon-Fri 9AM-6PM EST</p>
                                 </div>
-                                <div className='flex items-start space-x-3'>
-                                    <div 
-                                        className='
-                                            w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
-                                            flex items-center justify-center flex-shrink-0 mt-0.5
-                                        '
-                                    >
-                                        <MapPin size={14}/>
-                                    </div>
-                                    <div>
-                                        <p className='text-white font-medium'>123 Innovation Street</p>
-                                        <p className='text-gray-300 text-sm'>San Fransisco, CA 94105</p>
-                                    </div>
+                            </div>
+                            <div className='flex items-start space-x-3'>
+                                <div 
+                                    className='
+                                        w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg
+                                        flex items-center justify-center flex-shrink-0 mt-0.5
+                                    '
+                                >
+                                    <MapPin size={14}/>
+                                </div>
+                                <div>
+                                    <p className='text-white font-medium'>123 Innovation Street</p>
+                                    <p className='text-gray-300 text-sm'>San Fransisco, CA 94105</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Bottom Bar */}
-                <div 
+            {/* Bottom Bar */}
+            <div 
+                className='
+                    border-t border-gray-700/50 pt-8 flex flex-col md:flex-row justify-between items-center
+                '
+            >
+                <div className='text-gray-300 text-sm mb-4 md:mb-0'>
+                    <p>
+                        2025 Nexus. All right reserved. | Privacy Policy | Terms of Services | Cookie Policy
+                    </p>
+                </div>
+                <button 
                     className='
-                        border-t border-gray-700/50 pt-8 flex flex-col md:flex-row justify-between items-center
+                        w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex
+                        items-center justify-center hover:scale-110 transition-all duration-300
                     '
                 >
-                    <div className='text-gray-300 text-sm mb-4 md:mb-0'>
-                        <p>
-                            2025 Nexus. All right reserved. | Privacy Policy | Terms of Services | Cookie Policy
-                        </p>
-                    </div>
-                    <button 
-                        className='
-                            w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex
-                            items-center justify-center hover:scale-110 transition-all duration-300
-                        '
-                    >
-                        <ArrowUp size={18}/>
-                    </button>
-                </div>
-            </div>            
+                    <ArrowUp size={18}/>
+                </button>
+            </div>
         </footer>
     )
 }
