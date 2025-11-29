@@ -1,7 +1,55 @@
-import { Calendar, Clock, MessageCircle, Send, User } from 'lucide-react'
-import React from 'react'
+import { Calendar, Clock, Mail, MapPin, MessageCircle, Phone, Send, User } from 'lucide-react'
+import React, { useState } from 'react'
+
+const contactMethods = [
+    {
+        icon: Mail,
+        title: "Email Us",
+        description: "Get in touch via email",
+        details: ["hello@nexus.com", "support@nexus.com"],
+        color: "from-purple-500 to-pink-500"
+    },
+    {
+        icon: Phone,
+        title: "Call Us",
+        description: "Speak with our team",
+        details: ["+1 (555) 123-4567", "Mon-Fri 9AM-6PM EST"],
+        color: "from-blue-500 to-cyan-500"
+    },
+    {
+        icon: MapPin,
+        title: "Visit Us",
+        description: "Come to our office",
+        details: ["123 Innovation Street", "San Francisco, CA 94105"],
+        color: "from-green-500 to-teal-500"
+    },
+    {
+        icon: MessageCircle,
+        title: "Live Chat",
+        description: "Chat with support",
+        details: ["Available 24/7", "Instant responses"],
+        color: "from-yellow-500 to-orange-500"
+    },
+]
 
 function Contact() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        company: "",
+        budget: "",
+        message: "",
+    })
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("Form Submitted", formData)
+    }
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+    
   return (
     <section id='contact'>
         {/* Background Element */}
@@ -46,27 +94,41 @@ function Contact() {
 
             {/* Contact Method */}
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16'>
-                <div 
-                    className='
-                        group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all 
-                        duration-300 hover:-translate-y-2 border border-gray-100 text-center
-                    '
-                >
-                    <div
-                        className={`
-                            w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center
-                            mx-auto mb-4 group-hover:scale-110 transition-all duration-300
-                        `}
-                    >
-                        <User size={24} className='text-white'/>
-                    </div>
-                    <h3 className='text-lg font-bold text-gray-900 mb-2'>Title</h3>
-                    <p className='text-gray-600 text-sm mb-3'>Description</p>
+                {contactMethods.map((method, index) => {
+                    return (
+                        <div 
+                            className='
+                                group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all 
+                                duration-300 hover:-translate-y-2 border border-gray-100 text-center
+                            '
+                        >
+                            <div
+                                className={`
+                                    w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center
+                                    mx-auto mb-4 group-hover:scale-110 transition-all duration-300 ${method.color}
+                                `}
+                            >
+                                <method.icon size={24} className='text-white'/>
+                            </div>
+                            <h3 className='text-lg font-bold text-gray-900 mb-2'>
+                                {method.title}
+                            </h3>
+                            <p className='text-gray-600 text-sm mb-3'>
+                                {method.description}
+                            </p>
 
-                    <div className='space-y-1'>
-                        <p className='text-gray-700 text-sm font-medium'>Details</p>
-                    </div>
-                </div>
+                            <div className='space-y-1'>
+                                {method.details.map((detail, detindex) => {
+                                    return (
+                                        <p className='text-gray-700 text-sm font-medium' key={detindex}>
+                                            {detail}
+                                        </p>
+                                    )
+                                })}                                
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
 
             {/* Contact Form */}
@@ -81,7 +143,7 @@ function Contact() {
                         </p>
                     </div>
 
-                    <form className='space-y-6'>
+                    <form className='space-y-6' onSubmit={handleSubmit}>
                         <div className='grid md:grid-cols-2 gap-6'>
                             <div>
                                 <label
@@ -92,6 +154,9 @@ function Contact() {
                                 </label>
                                 <input
                                     type='text'
+                                    id='name'
+                                    name='name'
+                                    onChange={handleChange}
                                     className='
                                         w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
                                         focus:ring-purple-500 focus:border-transparent transition-all 
@@ -108,7 +173,11 @@ function Contact() {
                                     Email Address *
                                 </label>
                                 <input
-                                    type='text'
+                                    type='email'
+                                    id='email'
+                                    name='email'
+                                    onChange={handleChange}
+                                    required
                                     className='
                                         w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
                                         focus:ring-purple-500 focus:border-transparent transition-all 
@@ -117,23 +186,6 @@ function Contact() {
                                     placeholder='john@company.com'
                                 />
                             </div>
-                        </div>                        
-                        <div>
-                            <label
-                                htmlFor=''
-                                className='block text-sm font-semibold text-gray-700 mb-2'
-                            >
-                                Full Name *
-                            </label>
-                            <input
-                                type='text'
-                                className='
-                                    w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
-                                    focus:ring-purple-500 focus:border-transparent transition-all 
-                                    duration-300 bg-gray-50 focus:bg-white
-                                '
-                                placeholder='John Doe'
-                            />
                         </div>
                         <div className='grid md:grid-cols-2 gap-6'>
                             <div>
@@ -145,6 +197,9 @@ function Contact() {
                                 </label>
                                 <input
                                     type='text'
+                                    id='company'
+                                    name='company'
+                                    onChange={handleChange}
                                     className='
                                         w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
                                         focus:ring-purple-500 focus:border-transparent transition-all 
@@ -161,6 +216,9 @@ function Contact() {
                                     Project Budget *
                                 </label>
                                 <select 
+                                    id='budget'
+                                    name='budget'
+                                    onChange={handleChange}
                                     className='
                                         w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
                                         focus:ring-purple-500 focus:border-transparent transition-all 
@@ -184,6 +242,10 @@ function Contact() {
                             </label>
                             <textarea
                                 type='text'
+                                id='message'
+                                name='message'
+                                    onChange={handleChange}
+                                required
                                 className='
                                     w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2
                                     focus:ring-purple-500 focus:border-transparent transition-all 
